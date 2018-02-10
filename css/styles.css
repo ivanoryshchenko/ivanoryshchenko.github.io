@@ -130,17 +130,12 @@ a, a:hover {
   }
 }
 
-/* Tablets */
-
-@media screen and (max-width: 640px) {
-  .wrapper {
-    margin-top: 40px;
-  }
-}
-
 /* Mobile temp*/
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 512px) {
+  .wrapper {
+    margin-top: 0px;
+  }
   .container {
     padding: 20px;
   }
