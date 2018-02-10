@@ -152,3 +152,9 @@ a, a:hover {
     padding: 10px;
   }
 }
+
+@media screen and (max-height: 412px) {
+  .wrapper {
+    margin-top: 60px;
+  }
+}
