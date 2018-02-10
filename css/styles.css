@@ -157,4 +157,7 @@ a, a:hover {
   .wrapper {
     margin-top: 60px;
   }
+  .wrapper-p {
+    display: none; 
+  }
 }
