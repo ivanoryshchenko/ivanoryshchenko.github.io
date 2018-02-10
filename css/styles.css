@@ -105,7 +105,7 @@ a, a:hover {
   border: 3px solid #FFf;
   padding: 1em 3em;
   color: #FFf;
-  transition: all 0.2s ease 0s; 
+  transition: all 0.2s ease 0s;
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 0.1em;
@@ -123,6 +123,7 @@ a, a:hover {
 }
 
 /* Large screens */
+
 @media screen and (min-width: 1920px) {
   .container {
     background: url("../img/bg-1920.jpg") no-repeat top;
@@ -130,6 +131,7 @@ a, a:hover {
 }
 
 /* Tablets */
+
 @media screen and (max-width: 640px) {
   .wrapper {
     margin-top: 40px;
@@ -137,19 +139,14 @@ a, a:hover {
 }
 
 /* Mobile temp*/
+
 @media screen and (max-width: 640px) {
   .container {
     padding: 20px;
   }
-
-    .menu {
+  .menu {
     display: none;
   }
-
-  .wrapper-p {
-    display: none;
-  }
-
   .wrapper>* {
     display: block;
   }
@@ -159,8 +156,7 @@ a, a:hover {
   .container {
     padding: 10px;
   }
-
   .wrapper {
-      margin-top: 40px;
-    }
+    margin-top: 40px;
+  }
 }
