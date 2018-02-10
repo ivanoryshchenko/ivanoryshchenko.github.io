@@ -105,7 +105,7 @@ a, a:hover {
   border: 3px solid #FFf;
   padding: 1em 3em;
   color: #FFf;
-  transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s; 
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 0.1em;
@@ -138,7 +138,11 @@ a, a:hover {
 
 /* Mobile temp*/
 @media screen and (max-width: 640px) {
-  .nav {
+  .container {
+    padding: 20px;
+  }
+
+    .menu {
     display: none;
   }
 
@@ -146,11 +150,17 @@ a, a:hover {
     display: none;
   }
 
-  .wrapper {
-    margin-top: -40px;
-  }
-
   .wrapper>* {
     display: block;
   }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 10px;
+  }
+
+  .wrapper {
+      margin-top: 40px;
+    }
 }
