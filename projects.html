@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Ivan Oryshchenko</title>
+  <meta name="description" content="X">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+  <!-- <video playsinline autoplay muted>
+    <source src="bg-vd.mp4" type="video/mp4">
+  </video> -->
+
+  <nav id="top" class="nav-bar">
+    <span id="logo">
+      <a href="index.html">Ivan Oryshchenko</a>
+    </span>
+    <div id="menu">
+      <a href="about.html" class="item">Work process</a>
+      <a href="projects.html" class="item">Projects</a>
+      <a href="contact.html" class="item">Contact</a>
+      <a href="#" class="item-lang">RU</a>
+    </div>
+    <div id="toggle">
+      <div class="span" id="one"></div>
+      <div class="span" id="two"></div>
+      <div class="span" id="three"></div>
+    </div>
+  </nav>
+
+  <aside id="resize">
+    <div id="menu">
+      <a href="about.html" class="item">Work process</a>
+      <a href="projects.html" class="item">Projects</a>
+      <a href="contact.html" class="item">Contact</a>
+      <a href="#" class="item-lang">RU</a>
+    </div>
+  </aside>
+
+  <div class="projects-container animated fadeIn">
+
+    <a class="card">
+      <div class="project-card tesla">
+        <div class="card-content">
+          <h3>Tesla</h3>
+          <p>Model S website</p>
+          <p>Complete redesign. Inspiration: Beats, Nike...</p>
+        </div>
+      </div>
+    </a>
+
+    <a class="card animated">
+      <div class="project-card slack">
+        <div class="card-content">
+          <h3>Slack</h3>
+          <p>An enterprise software platform that allows teams and businesses of all sizes to communicate effectively.</p>
+          <p>Created the same page from scratch</p>
+        </div>
+      </div>
+    </a>
+
+    <a class="card">
+      <div class="project-card palantir">
+        <div class="card-content">
+          <h3>Palantir</h3>
+          <p>A suite of software applications for integrating, visualizing, and analyzing information.</p>
+          <p>Collapsed all the vital content into one single page</p>
+        </div>
+      </div>
+    </a>
+
+    <a class="card">
+      <div class="project-card myclean">
+        <div class="card-content">
+          <h3>MyClean</h3>
+          <p>It's a home and office cleaning services company.</p>
+          <p>Created like the Slack page</p>
+        </div>
+      </div>
+    </a>
+
+    <a class="card">
+      <div class="project-card robinhood">
+        <div class="card-content">
+          <h3>Robinhood</h3>
+          <p>A stock brokerage that allows customers to buy and sell U.S. listed stocks and ETFs with zero commission.</p>
+          <p>Cosmetic design changes</p>
+        </div>
+      </div>
+    </a>
+
+    <footer>
+      <div class="last">
+        Copyright 2018
+      </div>
+    </footer>
+
+    <a href="#top" class="vverh"><i class="fas fa-angle-up fa-lg"></i></a>
+
+    <script>
+      $("#toggle").click(function() {
+        $(this).toggleClass('on');
+        $("#resize").toggleClass("active");
+      });
+
+      if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+      window.onmousewheel = document.onmousewheel = wheel;
+
+      function wheel(event) {
+        var delta = 0;
+        if (event.wheelDelta) delta = event.wheelDelta / 120;
+        else if (event.detail) delta = -event.detail / 3;
+
+        handle(delta);
+        if (event.preventDefault) event.preventDefault();
+        event.returnValue = false;
+      }
+
+      function handle(delta) {
+        var time = 400;
+        var distance = 200;
+
+        $('html, body').stop().animate({
+          scrollTop: $(window).scrollTop() - (distance * delta)
+        }, time);
+      }
+
+      // Select all links with hashes
+      $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+          // On-page links
+          if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+            location.hostname == this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 400, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                  return false;
+                } else {
+                  $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                  $target.focus(); // Set focus again
+                };
+              });
+            }
+          }
+        });
+    </script>
+
+</body>
+
+</html>

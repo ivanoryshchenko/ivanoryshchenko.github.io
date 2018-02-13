@@ -10,30 +10,60 @@
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
-  <script defer src="js/main.js"></script>
-  <script defer src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <div class="container">
-    <div class="nav animated fadeInDown">
-      <a class="logo" href="index.html">Ivan Oryshchenko</a>
-      <div class="menu">
-        <a href="#" class="item">About</a>
-        <a href="#" class="item">Projects</a>
-        <a href="#" class="item">Contact</a>
-      </div>
+  <!-- <video playsinline autoplay muted>
+    <source src="bg-vd.mp4" type="video/mp4">
+  </video> -->
+
+  <nav id="top" class="nav-bar">
+    <span id="logo">
+      <a href="index.html">Ivan Oryshchenko</a>
+    </span>
+    <div id="menu">
+      <a href="about.html" class="item">Work process</a>
+      <a href="projects.html" class="item">Projects</a>
+      <a href="contact.html" class="item">Contact</a>
+      <a href="#" class="item-lang">RU</a>
     </div>
-    <div class="wrapper animated fadeIn">
-      <div class="wrapper-text">
-        <h1 class="wrapper-h1">Lorem ipsum dolor sit amet.</h1>
-        <p class="wrapper-p">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    <div id="toggle">
+      <div class="span" id="one"></div>
+      <div class="span" id="two"></div>
+      <div class="span" id="three"></div>
+    </div>
+  </nav>
+
+  <aside id="resize">
+    <div id="menu">
+      <a href="about.html" class="item">Work process</a>
+      <a href="projects.html" class="item">Projects</a>
+      <a href="contact.html" class="item">Contact</a>
+      <a href="#" class="item-lang">RU</a>
+    </div>
+  </aside>
+
+  <div class="container hero-bg">
+    <div class="hero-wrapper animated fadeIn">
+      <div class="hero-section">
+        <h1>Frontend for your business</h1>
+        <p class="ls">HTML5, CSS3-Sass, JavaScript-jQuery</p>
       </div>
-      <a class="wrapper-btn up" href="projects.html">Portfolio</a>
+      <a class="hero-btn" href="projects.html">Portfolio</a>
     </div>
   </div>
+
+  <script>
+    $("#toggle").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+    });
+  </script>
+
 </body>
 
 </html>
