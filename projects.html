@@ -48,12 +48,11 @@
   </aside>
 
   <div class="projects-container animated fadeIn">
-
     <a class="card">
       <div class="project-card tesla">
         <div class="card-content">
           <h3>Tesla</h3>
-          <p>Model S website</p>
+          <p>Model S website redesign concept</p>
           <!-- <p>Complete redesign. Inspiration: Beats, Nike...</p> -->
         </div>
       </div>
@@ -65,6 +64,16 @@
           <h3>Slack</h3>
           <p>An enterprise software platform that allows teams and businesses of all sizes to communicate effectively.</p>
           <!-- <p>Created the same page from scratch</p> -->
+        </div>
+      </div>
+    </a>
+
+    <a class="card">
+      <div class="project-card robinhood">
+        <div class="card-content">
+          <h3>Robinhood</h3>
+          <p>A stock brokerage that allows customers to buy and sell U.S. listed stocks and ETFs with zero commission.</p>
+          <!-- <p>Cosmetic design changes</p> -->
         </div>
       </div>
     </a>
@@ -89,88 +98,81 @@
       </div>
     </a>
 
-    <a class="card">
-      <div class="project-card robinhood">
-        <div class="card-content">
-          <h3>Robinhood</h3>
-          <p>A stock brokerage that allows customers to buy and sell U.S. listed stocks and ETFs with zero commission.</p>
-          <!-- <p>Cosmetic design changes</p> -->
-        </div>
-      </div>
-    </a>
-
     <footer>
       <div class="last">
         Copyright 2018
       </div>
     </footer>
 
-    <a href="#top" class="vverh"><i class="fas fa-angle-up fa-lg"></i></a>
+  </div>
 
-    <script>
-      $("#toggle").click(function() {
-        $(this).toggleClass('on');
-        $("#resize").toggleClass("active");
-      });
 
-      if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-      window.onmousewheel = document.onmousewheel = wheel;
+  <a href="#top" class="vverh"><i class="fas fa-angle-up fa-lg"></i></a>
 
-      function wheel(event) {
-        var delta = 0;
-        if (event.wheelDelta) delta = event.wheelDelta / 120;
-        else if (event.detail) delta = -event.detail / 3;
+  <script>
+    $("#toggle").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+    });
 
-        handle(delta);
-        if (event.preventDefault) event.preventDefault();
-        event.returnValue = false;
-      }
+    if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
+    window.onmousewheel = document.onmousewheel = wheel;
 
-      function handle(delta) {
-        var time = 400;
-        var distance = 200;
+    function wheel(event) {
+      var delta = 0;
+      if (event.wheelDelta) delta = event.wheelDelta / 120;
+      else if (event.detail) delta = -event.detail / 3;
 
-        $('html, body').stop().animate({
-          scrollTop: $(window).scrollTop() - (distance * delta)
-        }, time);
-      }
+      handle(delta);
+      if (event.preventDefault) event.preventDefault();
+      event.returnValue = false;
+    }
 
-      // Select all links with hashes
-      $('a[href*="#"]')
-        // Remove links that don't actually link to anything
-        .not('[href="#"]')
-        .not('[href="#0"]')
-        .click(function(event) {
-          // On-page links
-          if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-            location.hostname == this.hostname
-          ) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
-            if (target.length) {
-              // Only prevent default if animation is actually gonna happen
-              event.preventDefault();
-              $('html, body').animate({
-                scrollTop: target.offset().top
-              }, 400, function() {
-                // Callback after animation
-                // Must change focus!
-                var $target = $(target);
-                $target.focus();
-                if ($target.is(":focus")) { // Checking if the target was focused
-                  return false;
-                } else {
-                  $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                  $target.focus(); // Set focus again
-                };
-              });
-            }
+    function handle(delta) {
+      var time = 400;
+      var distance = 200;
+
+      $('html, body').stop().animate({
+        scrollTop: $(window).scrollTop() - (distance * delta)
+      }, time);
+    }
+
+    // Select all links with hashes
+    $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 400, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(":focus")) { // Checking if the target was focused
+                return false;
+              } else {
+                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
           }
-        });
-    </script>
+        }
+      });
+  </script>
 
 </body>
 
