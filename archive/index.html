@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Ivan Oryshchenko</title>
+  <meta name="description" content="X">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113139042-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-113139042-1');
+  </script>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+  <!-- <video playsinline autoplay muted>
+    <source src="bg-vd.mp4" type="video/mp4">
+  </video> -->
+
+  <nav id="top" class="nav-bar">
+    <span id="logo">
+      <a href="index.html">Ivan Oryshchenko</a>
+    </span>
+    <div id="menu">
+      <a href="about.html" class="item">Work process</a>
+      <a href="projects.html" class="item">Projects</a>
+      <a href="contact.html" class="item">Contact</a>
+      <a href="#" class="item-lang">RU</a>
+    </div>
+    <div id="toggle">
+      <div class="span" id="one"></div>
+      <div class="span" id="two"></div>
+      <div class="span" id="three"></div>
+    </div>
+  </nav>
+
+  <aside id="resize">
+    <div id="menu">
+      <a href="about.html" class="item">Work process</a>
+      <a href="projects.html" class="item">Projects</a>
+      <a href="contact.html" class="item">Contact</a>
+      <a href="#" class="item-lang">RU</a>
+    </div>
+  </aside>
+
+  <div class="container hero-bg">
+    <div class="hero-wrapper animated fadeIn">
+      <div class="hero-section">
+        <h1>Frontend for your business</h1>
+        <p class="ls">HTML5, CSS3-Sass, JavaScript-jQuery</p>
+      </div>
+      <a class="hero-btn" href="projects.html">Portfolio</a>
+    </div>
+  </div>
+
+  <script>
+    $("#toggle").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+    });
+  </script>
+
+</body>
+
+</html>
