@@ -63,7 +63,7 @@ a, a:hover {
   opacity: 0.6;
 }
 
-.sticky-menu, .sticky-menu:hover {
+.sticky-menu {
   /* transition: all 0.2s ease 0s; */
   position: fixed;
   top: 0;
