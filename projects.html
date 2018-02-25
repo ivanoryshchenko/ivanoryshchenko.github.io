@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/sticky.min.js"></script>
@@ -27,51 +27,23 @@
 <body id="top">
   <header>
     <div class="nav">
-      <div class="nazgul">
+      <div class="nazgul sticky-menu">
         <a class="logo" href="#">Ivan Oryshchenko</a>
         <div class="menu">
           <a href="#" class="item disable">Blog</a>
-          <a href="#" class="item">Development process</a>
+          <a href="#" class="item">Development-About</a>
           <a href="#" class="item">Projects</a>
           <a href="#" class="item mail">Contact</a>
         </div>
       </div>
-      <div id="toggle">
-        <div class="span" id="one"></div>
-        <div class="span" id="two"></div>
-        <div class="span" id="three"></div>
-      </div>
-      <aside id="resize">
-        <div id="menu">
-          <a href="#" class="item disable">Blog</a>
-          <a href="#" class="item">Development process</a>
-          <a href="#" class="item">Projects</a>
-          <a href="#" class="item mail">Contact</a>
-        </div>
-      </aside>
-    </div>
-
-    <div class="gandalf">
-      <div class="hero">
-        <p>HTML5, CSS3-Sass, JavaScript-jQuery, Gulp and Git</p>
-        <h1>Frontend for your business</h1>
-        <a href="" class="btn">Contact me</a>
-      </div>
-    </div>
-    <div class="gollum">
-      <a href="#first" id="down">
-        <svg fill="#212121" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53px" height="20px" viewBox="0 0 53 20" enable-background="new 0 0 53 20" xml:space="preserve">
-          <g><polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779"></polygon></g>
-        </svg>
-      </a>
-      <a href="#" class="lang">RU</a>
     </div>
   </header>
 
   <main>
-    <div class="container">
-      <section id="first">
-        <div class="BFT">Projects</div>
+    <section id="first">
+      <div class="container" style="margin-top: 120px;">
+        <div class="BFT">
+          <p class="disable">2017-2018</p>Main</div>
         <article class="card">
           <div class="slack img-area"></div>
           <div class="text-area">
@@ -79,7 +51,7 @@
               <h4>Slack</h4>
               <p>An enterprise software platform that allows teams and businesses of all sizes to communicate effectively. I recreated their main webpage using CSS grid
               </p>
-              <a href="" class="link">See the website</a>
+              <a href="" class="link" target="_blank">See the website</a>
             </div>
           </div>
         </article>
@@ -91,7 +63,7 @@
               <h4>Comma.ai</h4>
               <p>Comma is a self-driving car kit. Complete website redesign
               </p>
-              <a href="" class="link">See the website</a>
+              <a href="" class="link" target="_blank">See the website</a>
             </div>
           </div>
         </article>
@@ -103,7 +75,7 @@
               <h4>Palantir</h4>
               <p>A suite of software applications for integrating, visualizing, and analyzing information. Added a few vital screens
               </p>
-              <a href="" class="link">See the website</a>
+              <a href="" class="link" target="_blank">See the website</a>
             </div>
           </div>
         </article>
@@ -115,32 +87,61 @@
               <h4>MyClean</h4>
               <p>It's a home and office cleaning services company.
               </p>
-              <a href="" class="disable">In development</a>
+              <a href="" class="disable" target="_blank">In development</a>
             </div>
           </div>
         </article>
-        <div class="right"><a class="link" href="projects.html">Other projects</a></div>
-      </section>
+      </div>
+    </section>
 
+    <section id="second">
+      <div class="container">
+        <div class="BFT">
+          <p class="disable">2017</p>Made with <a class="link" href="https://www.adobe.com/products/muse.html" target="_blank">Adobe Muse</a></div>
+        <article class="card">
+          <div class="brusov img-area"></div>
+          <div class="text-area">
+            <div class="wrapper">
+              <h4>Coworking on the ship</h4>
+              <p>A quiet workplace in the heart of Moscow on the deck of the ship Bryusov
+              </p>
+              <a href="http://coworking.zzz.com.ua/" class="link" target="_blank">See the website</a>
+            </div>
+          </div>
+        </article>
 
-      <!-- <section id="second">
+        <article class="card">
+          <div class="aer img-area"></div>
+          <div class="text-area">
+            <div class="wrapper">
+              <h4>Aer Fit Pack</h4>
+              <p>The Compact Gym/Work Backpack Designed for the City.
+              </p>
+              <a href="http://fitpack.zzz.com.ua/" class="link" target="_blank">See the website</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="aipetri img-area"></div>
+          <div class="text-area">
+            <div class="wrapper">
+              <h4>Ai-Petri</h4>
+              <p>A local pizza delievery service
+              </p>
+              <a href="" class="link" target="_blank">See the website</a>
+            </div>
+          </div>
+        </article>
+
         <div class="stranger">
           <div class="flex-between">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <a href="" class="btn">Read more</a>
+            <a href="" class="btn" target="_blank">Read more</a>
           </div>
         </div>
-      </section> -->
-    </div>
-
-      <section id="third">
-        <div class="contact">
-          <div class="surprise">Now, let me know</div>
-          <p><input id="user-name" type="text" name="Name" placeholder="Your name"></p>
-          <p><input class="next" type="submit" value="Next —"></p>
-        </div>
-      </section>
-
+      </div>
+    </section>
 
     <a href="#top" id="up" class="up-btn">
       <svg fill="#212121" version="1.1" id="up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="53px" height="20px" viewBox="0 0 53 20" enable-background="new 0 0 53 20" xml:space="preserve">

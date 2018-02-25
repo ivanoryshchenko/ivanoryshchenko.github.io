@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>X</title>
+  <meta name="description" content="X">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/sticky.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<!-- link to github -->
+
+<body id="top">
+  <header>
+    <div class="nav">
+      <div class="nazgul sticky-menu">
+        <a class="logo" href="#">Ivan Oryshchenko</a>
+        <div class="menu">
+          <a href="#" class="item disable">Blog</a>
+          <a href="#" class="item">Development-About</a>
+          <a href="#" class="item">Projects</a>
+          <a href="#" class="item mail">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="first">
+      <div class="container" style="padding-top: 120px;">
+        <div class="contact-form">
+          <form action="https://formspree.io/ivanoryshchenko@gmail.com" method="POST">
+            <artice class="flex">
+              <input class="input" type="text" name="Name" placeholder="Your name">
+              <input class="input" type="email" name="Email" placeholder="Email">
+              <input class="input" type="text" name="Subject" placeholder="Subject">
+            </artice>
+            <textarea class="textarea input" name="Message" placeholder="Message"></textarea>
+            <article class="flex">
+              <input class="btn" type="submit" value="Send">
+              <div class="disable">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+            </article>
+            <input type="hidden" name="_next" value="thanks.html" />
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="frodo">
+      <p class="disable" style="margin-right: 10px;">© Ivan Oryshchenko 2018.</p><a class="dublink" target="_blank" href="privacypolicy.html">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script defer src="js/main.js"></script>
+</body>
+
+</html>
