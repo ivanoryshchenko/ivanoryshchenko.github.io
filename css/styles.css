@@ -571,7 +571,7 @@ form .btn {
 }
 
 @media screen and (max-width: 768px) {
-  #down {
+  .gollum {
     display: none;
   }
   .container {
