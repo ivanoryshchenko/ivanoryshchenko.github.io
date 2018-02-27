@@ -222,19 +222,11 @@ a, a:hover {
   margin-right: -0.5em;
   display: inline-block;
   transition: all 0.2s ease 0s;
+  z-index: 1000;
 }
 
 .sticky-up:hover {
   opacity: 0.8;
-}
-
-.lang {
-  text-align: right;
-  transition: all 0.2s ease 0s;
-}
-
-.lang:hover {
-  opacity: 0.6;
 }
 
 .card {
@@ -331,9 +323,7 @@ a, a:hover {
 }
 
 .container {
-  padding: 0 120px;
-  margin: 80px 0;
-  min-height: 100vh;
+  padding: 80px 120px;
 }
 
 .BFT {
@@ -421,47 +411,11 @@ a, a:hover {
 
 /* .contact {
   margin-top: 120px;
-}
+}*/
 
 .contact-form {
   width: 100%;
-} */
-
-.contact {
-  margin-top: 120px;
-  background: #285078;
-  padding: 160px 120px;
-  color: #fff;
-}
-
-.surprise {
-  font: 48px 'Oswald';
-  line-height: 1em;
-}
-
-.next {
-  margin-top: 20px;
-  display: inline-block;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font: 18px 'Roboto';
-  color: #fff;
-  transition: all 0.2s ease 0s;
-}
-
-.next:hover {
-  color: #fff;
-  opacity: 0.6;
-}
-
-#user-name {
-  font: 48px 'Oswald';
-  color: #fff;
-  outline: none;
-  border: none;
-  background: none;
-  display: inline-block;
+  padding-top: 40px;
 }
 
 ::placeholder {
@@ -514,6 +468,10 @@ form .btn {
   margin-bottom: 2%;
 }
 
+.flex div {
+  margin-top: 2%;
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -524,6 +482,7 @@ form .btn {
   display: flex;
   padding: 40px 120px;
   background: #F5F5F5;
+  position: relative;
 }
 
 .frodo a {
@@ -549,9 +508,6 @@ form .btn {
   .text-area {
     padding: 80px 40px;
   }
-  .menu {
-    display: none;
-  }
   .stranger {
     display: none;
   }
@@ -571,11 +527,14 @@ form .btn {
 }
 
 @media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
   .gollum {
     display: none;
   }
   .container {
-    padding: 0 20px;
+    padding: 60px 20px;
   }
   .frodo {
     padding: 20px;
@@ -619,5 +578,22 @@ form .btn {
   }
   #user-name {
     width: 100%;
+  }
+  form .btn {
+    width: 100%;
+  }
+  .hero h1 {
+    font: 54px 'Oswald';
+    line-height: 1em;
+    margin-left: -0.03em;
+  }
+  .BFT {
+    font-size: 48px;
+  }
+}
+
+@media(min-width: 768px) {
+  #resize {
+    visibility: hidden !important;
   }
 }

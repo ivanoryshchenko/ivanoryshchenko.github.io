@@ -20,12 +20,3 @@ $('.container').waypoint(function(direction) {
     $('.up-btn').removeClass('sticky-up');
   }
 });
-
-$('.right').waypoint(function(direction) {
-  if (direction == "down") {
-    $('#user-name').focus();
-  } else if (direction == "up") {
-    $(this).val('');
-    $(this).trigger('blur');
-  }
-});

@@ -28,21 +28,33 @@
   <header>
     <div class="nav">
       <div class="nazgul sticky-menu">
-        <a class="logo" href="#">Ivan Oryshchenko</a>
+        <a class="logo" href="index.html">Ivan Oryshchenko</a>
         <div class="menu">
-          <a href="#" class="item disable">Blog</a>
-          <a href="#" class="item">Development-About</a>
-          <a href="#" class="item">Projects</a>
-          <a href="#" class="item mail">Contact</a>
+          <a href="development.html" class="item">Development</a>
+          <a href="projects.html" class="item">Projects</a>
+          <a href="contact.html" class="item mail">Contact</a>
         </div>
       </div>
+      <div id="toggle" class="tog-move">
+        <div class="span" id="one"></div>
+        <div class="span" id="two"></div>
+        <div class="span" id="three"></div>
+      </div>
+      <aside id="resize">
+        <div id="menu">
+          <a href="development.html" class="item">Development</a>
+          <a href="projects.html" class="item">Projects</a>
+          <a href="contact.html" class="item mail">Contact</a>
+        </div>
+      </aside>
     </div>
   </header>
 
   <main>
     <section id="first">
-      <div class="container" style="padding-top: 120px;">
+      <div class="container">
         <div class="contact-form">
+          <div class="BFT">Contact me</div>
           <form action="https://formspree.io/ivanoryshchenko@gmail.com" method="POST">
             <artice class="flex">
               <input class="input" type="text" name="Name" placeholder="Your name">
@@ -52,7 +64,7 @@
             <textarea class="textarea input" name="Message" placeholder="Message"></textarea>
             <article class="flex">
               <input class="btn" type="submit" value="Send">
-              <div class="disable">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+              <div>After you have sumbitted the form, you will receive a website brief on your email</div>
             </article>
             <input type="hidden" name="_next" value="thanks.html" />
           </form>
