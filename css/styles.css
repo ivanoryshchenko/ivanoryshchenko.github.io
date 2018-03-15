@@ -71,6 +71,16 @@ a, a:hover {
   z-index: 999;
   box-shadow: 0 5px 10px rgba(10, 12, 15, .05);
   padding: 20px 120px;
+  animation: slide-in .2s ease;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 #resize {
